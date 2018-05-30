@@ -3,7 +3,7 @@
            variant.outputs[0].processManifest.doLast {
                def manifestFile = "${buildDir}/intermediates/manifests/full/${variant.outputs[0].dirName}/AndroidManifest.xml"
                def updatedContent = new File(manifestFile).getText('UTF-8')
-                       .replaceAll("com.gatewang.jpushlib.","")
+                       .replaceAll("com.kawa.jpushlib.","")
                        .replaceAll("currentPackageName", "${applicationId}")
                        .replaceAll("my_Receiver","广播接收者路径") //广播接收者路径
                        .replaceAll("my_jpush_appkey","极光appkey") //极光appkey
